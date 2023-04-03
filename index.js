@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 
 app.get('/music', (req, res) => {
     var url = req.query.url;
-    // res.header("Content-Disposition", 'attachment; filename="music');
+    res.header("Content-Disposition", 'attachment; filename="music');
     ytdl(url, {format: 'mp3'}).pipe(res);
 });
 res.header('Content-Disposition', `attachment; filename="${title}.mp3"`);
