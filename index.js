@@ -17,7 +17,7 @@ app.get('/music', (req, res) => {
     res.header("Content-Disposition", 'attachment; filename="music');
     ytdl(url, {format: 'mp3'}).pipe(res);
 });
-res.header('Content-Disposition', `attachment; filename="${title}.mp3"`);
+// res.header('Content-Disposition', `attachment; filename="${title}.mp3"`);
         ytdl(url, {
             format: 'mp3',
             filter: 'audioonly',
